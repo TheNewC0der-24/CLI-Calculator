@@ -1,0 +1,21 @@
+{
+  "name": "cli-calculator",
+  "version": "1.0.0",
+  "description": "Command-Line Calculator provides the most fluid interface, especially if we are performing chained calculations i.e., multiple calculations that rely on the results of previous calculations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CLI",
+    "Calculator",
+    "cli-calculator",
+    "cli-typescript-calculator"
+  ],
+  "author": "Bhavya Khurana",
+  "license": "ISC",
+  "dependencies": {
+    "@types/readline-sync": "^1.4.4",
+    "readline-sync": "^1.4.10"
+  }
+}
