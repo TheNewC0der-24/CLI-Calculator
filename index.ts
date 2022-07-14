@@ -7,6 +7,10 @@ function main(): void {
     const operator: string = question('Enter Operator: ');
     const secondStr: string = question('Enter Second number: ');
 
+    const validInput: boolean = isNumber(firstStr) && isNumber(secondStr) && isOperator(operator);
+
+    console.log(validInput);
+
 }
 
 function isOperator(operator: string): boolean {

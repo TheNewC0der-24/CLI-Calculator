@@ -6,6 +6,8 @@ function main() {
     var firstStr = (0, readline_sync_1.question)('Enter First number: ');
     var operator = (0, readline_sync_1.question)('Enter Operator: ');
     var secondStr = (0, readline_sync_1.question)('Enter Second number: ');
+    var validInput = isNumber(firstStr) && isNumber(secondStr) && isOperator(operator);
+    console.log(validInput);
 }
 function isOperator(operator) {
     switch (operator) {
