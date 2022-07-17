@@ -8,14 +8,16 @@ function main() {
     var secondStr = (0, readline_sync_1.question)('Enter Second number: ');
     var validInput = isNumber(firstStr) && isNumber(secondStr) && isOperator(operator);
     if (validInput) {
-        console.log('\n**********Is Valid**********\n');
-        // const firstNum: number = parseInt(firstStr);
-        // const secondNum: number = parseInt(secondStr);
-        // const result = calculate(firstStr, operator, secondStr);
+        var firstNum = parseInt(firstStr);
+        var secondNum = parseInt(secondStr);
+        var result = calculate(firstNum, operator, secondNum);
     }
     else {
         console.error('\n**********Invalid Input**********\n');
+        main();
     }
+}
+function calculate(firstNum, operator, secondNum) {
 }
 function isOperator(operator) {
     switch (operator) {

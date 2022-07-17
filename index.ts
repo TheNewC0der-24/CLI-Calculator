@@ -14,11 +14,14 @@ function main(): void {
     if (validInput) {
         const firstNum: number = parseInt(firstStr);
         const secondNum: number = parseInt(secondStr);
-        const result = calculate(firstStr, operator, secondStr);
+        const result = calculate(firstNum, operator as Operator, secondNum);
     } else {
         console.error('\n**********Invalid Input**********\n');
         main();
     }
+}
+
+function calculate(firstNum: number, operator: Operator, secondNum: number) {
 
 }
 
