@@ -1,6 +1,8 @@
-console.log('CLI Calculator :\n');
+console.log('CLI CALCULATOR :-\n');
 
 import { question } from "readline-sync";
+
+type Operator = '+' | '-' | '*' | '/';
 
 function main(): void {
     const firstStr: string = question('Enter First number: ');
@@ -9,7 +11,14 @@ function main(): void {
 
     const validInput: boolean = isNumber(firstStr) && isNumber(secondStr) && isOperator(operator);
 
-    console.log(validInput);
+    if (validInput) {
+        const firstNum: number = parseInt(firstStr);
+        const secondNum: number = parseInt(secondStr);
+        const result = calculate(firstStr, operator, secondStr);
+    } else {
+        console.error('\n**********Invalid Input**********\n');
+        main();
+    }
 
 }
 
