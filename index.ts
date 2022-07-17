@@ -15,6 +15,8 @@ function main(): void {
         const firstNum: number = parseInt(firstStr);
         const secondNum: number = parseInt(secondStr);
         const result = calculate(firstNum, operator as Operator, secondNum);
+        console.log(`Result: ${result}`);
+
     } else {
         console.error('\n**********Invalid Input**********\n');
         main();
@@ -22,7 +24,18 @@ function main(): void {
 }
 
 function calculate(firstNum: number, operator: Operator, secondNum: number) {
-
+    switch (operator) {
+        case '+':
+            return firstNum + secondNum;
+        case '-':
+            return firstNum - secondNum;
+        case '*':
+            return firstNum * secondNum;
+        case '/':
+            return firstNum / secondNum;
+        default:
+            return 0;
+    }
 }
 
 function isOperator(operator: string): boolean {
